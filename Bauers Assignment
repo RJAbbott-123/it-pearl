@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<html>
+<body>
+
+<h2>New Patient Registration </h2>
+
+<h4>Please fill out the form below</h4>
+<form action="/action_page.php">
+<label for="fname"> First Name: </label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="mname"> Middle Initial: </label><br>
+<input type="text" id="mname" name="mname"><br>
+<label for="lname"> Last Name: </label><br>
+<input type="text" id="lname" name="lname"><br>
+<label for="email"> Email: </label><br>
+<input type="text" id="email" name="email"><br>
+</form>
+
+<form action="/action_page.php">
+  <input type="radio" id="male" name="fav_language" value="Male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="fav_language" value="Female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="na" name="fav_language" value="N/A">
+  <label for="na">N/A</label><br>
+</form>
+
+<form action="/action_page.php">
+<label for="bday"> Birthday: </label><br>
+<input type="text" id="bday" name="bday"><br>
+<label for="height"> Height (inches): </label><br>
+<input type="text" id="height" name="height"><br>
+<label for="weight"> Weight (pounds): </label><br>
+<input type="text" id="weight" name="weight"><br>
+</form>
+
+<!--Line Here To Break Up The Form-->
+
+<form action="/action_page.php">
+<label for="phone"> Phone Number: </label><br>
+<input type="text" id="phone" name="phone"><br>
+<label for="status">Marital Status:</label>
+  <select id="status" name="status">
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+    <option value="Widowed">Widowed</option>
+    <option value="Divorced">Divorced</option>
+    <option value="Null" selected>Select a Status...</option>
+  </select>
+<label for="address"> Address: </label><br>
+<input type="text" id="address" name="address"><br>
+<label for="location"> City/State/Zip: </label><br>
+<input type="text" id="location" name="location"><br>
+</form>
+
+<!--Line Here to Break Up The Form-->
+
+</body>
+</html
