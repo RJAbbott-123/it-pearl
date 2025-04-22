@@ -1,0 +1,104 @@
+body {
+    background-color: #5677fc;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.main {
+  background: #ffffff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main ul {
+  width: 50%;
+  list-style: none;
+  border: 1px solid #000;
+  padding: 0;
+}
+
+.main ul li {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.main ul li:last-child {
+  border-bottom: none;
+}
+
+.main ul li a {
+  text-decoration: none;
+  color: #5677fc;
+  transition: color 0.3s;
+}
+
+.main ul li:hover a {
+  color: #fff;
+}
+
+.main ul li:hover:after {
+  width: 100%;
+}
+
+.main ul li span i {
+  float: right;
+  transition: margin-right 0.7s, opacity 0.7s;
+  opacity: 0;
+  color: white;
+}
+
+.main ul li:hover span i {
+  margin-right: 20px;
+  opacity: 1.0;
+}
+
+.main ul li:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: auto;
+  background: #5677fc;
+  z-index: -1;
+  transition: width 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.main ul li .json-data {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0px 0px;
+  color: white;
+  transition: all 0.5s ease;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.main ul li:hover .json-data {
+  height: auto;
+  opacity: 1.0;
+  overflow: visible;
+  padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.main ul li.active a {
+    color: #ff6347; /* Tomato color for active link */
+    font-weight: bold;
+}
+
+.main ul li.active:after {
+    background: #ff6347; /* Tomato background for active link */
+}

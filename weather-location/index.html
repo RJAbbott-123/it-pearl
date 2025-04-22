@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Location</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Petit Jean State Park, Arkansas</h1>
+    <input type="text" id="location" placeholder="Enter location">
+    <button onclick="fetchWeather()">Get Forecast</button>
+    <p id="errorMessage" class="error"></p>
+    <div id="forecastTable"></div>
+    <canvas id="temperatureChart" width="600" height="400"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

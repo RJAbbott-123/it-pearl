@@ -5,29 +5,84 @@
     <title>IT Pearl | Rory Abbott</title>
     <meta name="description" content="A collection from IT Pearl">
     <meta name="author" content="Rory Abbott">
-    <link href="/prototype/assests/css/style.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
-<h1>Rory Abbott</h1>
-<nav>
-<ul>
-    <li><a href="prototype/index.html">Prototype HTML Assignment</a></li>
-    <li><a href="form-demo/index.html">Form Demo</a></li>
-    <li><a href="css-demo/index.html">CSS Demo</a></li>
-    <li><a href="cheatsheet/index.html">Cheat Sheet</a></li>
-    <li><a href="circleassignment/index.html">Circle Assignment</a></li>
-    <li><a href="calculator/index.html"><Calculator</a></li>
-   
-<!--Logo Here-->
+<body>
+<div class="main">
+    <ul>
+        <li> <a href="prototype/index.html" target="_blank"> Prototype HTML Assignment </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="validation/index.html"> Form Demo </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="css-demo/index.html"> CSS Demo </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="cheatsheet/index.html"> Cheat Sheet </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="circleassignment/index.html"> Circle Assignment </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="calculator/index.html"> Calculator </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="web-project/home.html"> Micro-Site </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="converter/index.html"> Unit Conversion </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="currency/index.html"> Current Value History </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="weather-location/index.html"> Weather Location </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="buffalobasecamp/index.html" target="_blank"> Buffalo Basecamp </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
 
-    <li> Positioning Labs
+        <li> Positioning Labs </li>
+
+        <li> <a href="positioning-lab/float-1.html"> Float 1 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="positioning-lab/float-2.html"> Float 2 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="positioning-lab/absolute-1.html"> Absolute 1 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="positioning-lab/absolute-2.html"> Absolute 2 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="positioning-lab/exercise-1-flex.html"> Exercise 1 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
+        <li> <a href="positioning-lab/exercise-2-flex.html"> Exercise 2 </a> <span><i class="fa fa-arrow-right"></i></span>
+            <div class="json-data">Loading data...</div>
+        </li>
     </ul>
-        <li><a href="positioning-lab/float-1.html">Float 1</a></li>
-        <li><a href="positioning-lab/float-2.html">Float 2</a></li>
-        <li><a href="positioning-lab/absolute-1.html">Absolute 1</a></li>
-        <li><a href="positioning-lab/absolute-2.html">Absolute 2</a></li>
-        <li><a href="positioning-lab/exercise-1-flex.html">Exercise 1-Flex</a></li>
-        <li><a href="positioning-lab/exercise-2-flex.html">Exercise 2-Flex</a></li>
-    </nav>
-    </html>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var listItems = document.querySelectorAll(".main ul li");
+    
+        listItems.forEach(function(li) {
+            li.addEventListener("click", function() {
+                listItems.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+                this.classList.add("active");
+    
+                var jsonData = this.querySelector(".json-data");
+                jsonData.classList.toggle("show");
+            });
+        });
+    });
+    </script>    
 </body>
 </html>
