@@ -1,48 +1,94 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eef2f3;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .form-container {
-    margin: auto;
-    padding: 20px;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    background-color: white;
-    border-radius: 10px;
-  }
-  
-  input[type="text"] {
-    padding: 8px;
-    width: 70%;
-    margin: 10px 0;
-  }
-  
-  button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .error {
-    color: red;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 900px;
+  background: #fff;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+#location-info {
+  margin-bottom: 20px;
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.info-item {
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #f2f2f2;
+}
+
+canvas {
+  margin-bottom: 20px;
+}

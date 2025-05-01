@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Location</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7-Day Temperature Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="form-container">
-    <h1>Petit Jean State Park, Arkansas</h1>
-    <input type="text" id="location" placeholder="Enter location">
-    <button onclick="fetchWeather()">Get Forecast</button>
-    <p id="errorMessage" class="error"></p>
-    <div id="forecastTable"></div>
-    <canvas id="temperatureChart" width="600" height="400"></canvas>
+  <div class="container">
+    <h1>7-Day Temperature Forecast</h1>
+    <form id="locationForm">
+      <label for="locationInput">Enter a location:</label>
+      <input
+        type="text"
+        id="locationInput"
+        placeholder="Enter a location or type 'Devil's Den State Park'"
+        value="Devil's Den State Park"
+      />
+      <div id="message" class="message"></div>
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <div id="location-info"></div>
+
+    <table id="forecastTable">
+      <thead>
+        <tr>
+          <th>Date/Time</th>
+          <th>Temperature (°F)</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <canvas id="forecastChart" width="400" height="200"></canvas>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

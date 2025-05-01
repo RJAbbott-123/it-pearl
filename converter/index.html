@@ -1,103 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="JavaScript Unit Converter">
-  <meta name="keywords" content="JavaScript, AJAX, Unit Conversion">
-  <meta name="author" content="Rory Abbott">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unit Converter (AJAX)</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Units Conversion Calculator AJAX">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Rory Abbott">
+    <title>Units Conversion Calculator AJAX</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="converter/script/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 </head>
 <body>
-  <form id="convertor" novalidate onsubmit="return false;">
-    <div class="formcontainer">
-      <h1>Unit Converter (AJAX)</h1>
-      <fieldset id="detail">
-        <legend>Unit Conversion Calculator</legend>
-        <br>
-        <!-- Operand Input -->
-        <label for="Operand">From Value:</label>
-        <input type="text" id="Operand" name="Operand" size="15" maxlength="15" required>
-        <span id="OperandMsg" class="error"></span>
-        <br><br>
+<form id="myform">
+    <div class="formcontainer" onsubmit="return false">
+        <h1>Unit Converter (AJAX)</h1>
+        <fieldset id="detail">
+            <legend>Unit Converter (AJAX)</legend>  
+            <br>
+            
+            <label class="formlabel" for="FromValue">From Value: </label>
+            <input type="text" id="FromValue" name="FromValue" size="15" maxlength="15"       
+                   data-rule-required="true"  data-msg-required="Value is Required" 
+                   data-rule-number="true" data-msg-number="Operand 1 must be a Number">
+            <label class="error" for="FromValue" id="FromValueError"></label>
+            <br><br>
 
-        <!-- From Unit Selection -->
-        <label>From Unit:</label>
-        <label><input type="radio" name="Operator" id="CMOperator" value="cm"> Centimeters</label>
-        <label><input type="radio" name="Operator" id="MOperator" value="m"> Meters</label>
-        <label><input type="radio" name="Operator" id="KMOperator" value="km"> Kilometers</label>
-        <label><input type="radio" name="Operator" id="INOperator" value="in"> Inches</label>
-        <label><input type="radio" name="Operator" id="FTOperator" value="ft"> Feet</label>
-        <label><input type="radio" name="Operator" id="YDOperator" value="yd"> Yards</label>
-        <label><input type="radio" name="Operator" id="MIOperator" value="mi"> Miles</label>
-        <span id="OperatorMsg" class="error"></span>
-        <br><br>
+            <label class="formlabel">From Unit: </label>
+                <label for="FromCentimeters">
+                    <input type="radio" name="FromUnit" id="FromCentimeters" value="cm"
+                           data-rule-required="true" data-msg-required="From Unit is Required" />centimeters
+                </label>
+                <label for="FromMeters">
+                    <input type="radio" name="FromUnit" id="FromMeters" value="m">meters
+                </label>
+                <label for="FromKilometers">
+                    <input type="radio" name="FromUnit" id="FromKilometers" value="km">kilometers
+                </label>
+                <label for="FromInches">
+                    <input type="radio" name="FromUnit" id="FromInches" value="in">inches
+                </label>
+                <label for="FromFeet">
+                    <input type="radio" name="FromUnit" id="FromFeet" value="ft">feet
+                </label>
+                <label for="FromYards">
+                    <input type="radio" name="FromUnit" id="FromYards" value="yd">yards
+                </label>
+                <label for="FromMiles">
+                    <input type="radio" name="FromUnit" id="FromMiles" value="mi">miles
+                </label>
+            <label for="FromUnit" class="error" id="FromUnitError"></label>
+            <br><br>
 
-        <!-- To Unit Selection -->
-        <label>To Unit:</label>
-        <label><input type="radio" name="Operator2" id="CMOperator2" value="cm"> Centimeters</label>
-        <label><input type="radio" name="Operator2" id="MOperator2" value="m"> Meters</label>
-        <label><input type="radio" name="Operator2" id="KMOperator2" value="km"> Kilometers</label>
-        <label><input type="radio" name="Operator2" id="INOperator2" value="in"> Inches</label>
-        <label><input type="radio" name="Operator2" id="FTOperator2" value="ft"> Feet</label>
-        <label><input type="radio" name="Operator2" id="YDOperator2" value="yd"> Yards</label>
-        <label><input type="radio" name="Operator2" id="MIOperator2" value="mi"> Miles</label>
-        <span id="Operator2Msg" class="error"></span>
+            <label class="formlabel">To Unit: </label>
+            <label for="ToCentimeters">
+                <input type="radio" name="ToUnit" id="ToCentimeters" value="cm"
+                       data-rule-required="true" data-msg-required="To Unit is Required" />centimeters
+            </label>
+            <label for="ToMeters">
+                <input type="radio" name="ToUnit" id="ToMeters" value="m">meters
+            </label>
+            <label for="ToKilometers">
+                <input type="radio" name="ToUnit" id="ToKilometers" value="km">kilometers
+            </label>
+            <label for="ToInches">
+                <input type="radio" name="ToUnit" id="ToInches" value="in">inches
+            </label>
+            <label for="ToFeet">
+                <input type="radio" name="ToUnit" id="ToFeet" value="ft">feet
+            </label>
+            <label for="ToYards">
+                <input type="radio" name="ToUnit" id="ToYards" value="yd">yards
+            </label>
+            <label for="ToMiles">
+                <input type="radio" name="ToUnit" id="ToMiles" value="mi">miles
+            </label>
+        <label for="ToUnit" class="error" id="ToUnitError"></label>
         <br><br>
+            <label class="formlabel">To Value: </label>
+            <span id="ToValue"></span>
+            <br><br>
 
-        <!-- Result Display -->
-        <label>Result:</label>
-        <span id="Result"></span>
-        <br><br>
+            <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
 
-        <!-- Action Buttons -->
-        <input type="button" value="Calculate" onclick="calculate();">
-        <input type="button" value="Clear" onclick="clearForm();">
-      </fieldset>
+        </fieldset>
     </div>
-  </form>
-
-  <!-- Include Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-  <script src="assets/js/script.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("#convertor").validate({
-        rules: {
-          Operand: {
-            required: true,
-            number: true
-          },
-          Operator: "required",
-          Operator2: "required"
-        },
-        messages: {
-          Operand: {
-            required: "From value is required.",
-            number: "Please enter a valid number."
-          },
-          Operator: "Please select a 'From Unit'.",
-          Operator2: "Please select a 'To Unit'."
-        },
-        errorPlacement: function (error, element) {
-          console.log("Placing error for", element.attr("name"));
-          if (element.attr("name") === "Operator") {
-            error.appendTo("#OperatorMsg");
-          } else if (element.attr("name") === "Operator2") {
-            error.appendTo("#Operator2Msg");
-          } else {
-            error.insertAfter(element);
-          }
-        }
-      });
-
-      // Optionally, run validation on page load to see errors immediately:
-      // $("#convertor").validate().form();
-    });
-  </script>
+</form>
 </body>
 </html>
