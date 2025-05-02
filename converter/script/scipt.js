@@ -101,5 +101,5 @@ function clearForm() {
   document.getElementById("ToMiles").checked = false;
 
   document.getElementById("myform").reset();
-  document.getElementById("buttonID").addEventListener('click', clearForm);
+  document.getElementById("Result").innerText = "";
 }

@@ -28,3 +28,41 @@ function calculate() {
 function clearform() {
     document.getElementById("myform").reset();
     document.getElementById("Result").innerText = "";
+}
+
+$("#calculatorForm").validate({
+    rules: {
+        Operand1: {
+            required: true,
+            number: true
+        },
+        Operand2: {
+            required: true,
+            number: true
+        },
+        Operator: {
+            required: true
+        }
+    },
+    messages: {
+        Operand1: {
+            required: "Operand 1 is required",
+            number: "Operand 1 must be a number"
+        },
+        Operand2: {
+            required: "Operand 2 is required",
+            number: "Operand 2 must be a number"
+        },
+        Operator: {
+            required: "Operator is required"
+        }
+    },
+    errorPlacement: function(error, element) {
+        if (element.attr("name") === "Operator") {
+            error.appendTo("#OperatorError");
+        } else {
+            error.appendTo(`#${element.attr("name")}Error`);
+        }
+    }
+});
+});
