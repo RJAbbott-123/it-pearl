@@ -65,4 +65,3 @@ $("#calculatorForm").validate({
         }
     }
 });
-});
