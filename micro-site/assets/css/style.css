@@ -407,3 +407,20 @@ img {
   max-width: 500px; /* Set a maximum width */
   height: 300px; /* Maintain aspect ratio */
 }
+
+.lodging-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.lodging-option img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lodging-option img:hover {
+  transform: scale(1.05);
+}
