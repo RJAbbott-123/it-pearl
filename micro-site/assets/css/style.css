@@ -166,7 +166,6 @@ nav ul li a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  box-shadow: 15px 15px 0 rgba(0,0,0,0.2);
 }
 
 .hero h1 {
@@ -286,7 +285,7 @@ nav ul li a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  box-shadow: -15px 15px 0 rgba(0,0,0,0.2);
+  box-shadow: 15px 15px 0 rgba(0,0,0,0.2);
 }
 
 .about-content {
@@ -419,8 +418,4 @@ img {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-}
-
-.lodging-option img:hover {
-  transform: scale(1.05);
 }
