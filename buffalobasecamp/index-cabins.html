@@ -15,13 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/slick.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Pacifico&family=Rubik+Dirt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>Buffalo River</title>
 </head>
 <body>
@@ -30,13 +30,14 @@
             <figure>
                 <a href="index.html">
                   <img src="assets/img/header-logo1.png" alt="Buffalo River logo">
+                  <h4>Buffalo <br> BaseCamp</h4> 
                 </a>
-              </figure>              
+            </figure>
             <nav class="navbar">
                 <div class="hamburger" onclick="toggleMenu()">
                     &#9776;
                  </div>
-                <ul class="nav-list">
+                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index-about.html">About</a></li>
                     <li><a href="index-cabins.html">Cabins</a></li>
@@ -49,37 +50,58 @@
         <section id="bio">
             <img src="assets/img/cabins2.jpg" alt="Buffalo River" class="cover-img">
             <div class="bio-text">
-                <h1>Adventure Awaits</h1>
+                <h1>Nature Outside Comfort Inside</h1>
             </div>
         </section>
-        
         <section class="container">
             <div id="content">
-            <h1 class="intro"> Welcome </h1>
-            <p> Experience the best of the Ozarks with unforgettable stays and outdoor excitement. From charming cabins and scenic canoe trips to thrilling zip line adventures, Buffalo River Adventures is your go-to destination for fun, relaxation, and memory-making. </p>
+            <h1 class="intro"> Cabin Rental </h1>
+            <p> Bear Ridge offers two guests a cozy, fully furnished cabin for a romantic getaway in upper Buffalo River country.  The cabin has a main floor and sleeping loft with queen-size bed.  We are pleased to offer complimentary WIFI with this cabin rental. The cabin's kitchen features a dining bar and is fully furnished with appliances, basic meal prep utensils and cookware, a coffeemaker and even a dishwasher.  In the cabin's bathroom, you'll find a lovely stone walk-in shower, along with towels, soap, and shampoo. </p>
             </div>
         </section>
-      
-          <section class="thumb">
-              <div class="thumb-wrapper">
-                <img src="assets/img/cabins.png" alt="Buffalo River Cabin">
-                <a href="index.html" class="thumb-text">Cabins</a>
-              </div>
-              <div class="thumb-wrapper">
-                <img src="assets/img/float.png" alt="Buffalo River Canoe">
-                <a href="about.html" class="thumb-text"> Float</a>
-              </div>
-              <div class="thumb-wrapper">
-                <img src="assets/img/explore.png" alt="Buffalo River">
-                <a href="index.html" class="thumb-text">Explore</a>
-              </div>
-              <div class="thumb-wrapper">
-                <img src="assets/img/water.png" alt="Buffalo River Water Level">
-                <a href="about.html" class="thumb-text">Water Level</a>
-              </div>
-          </section>
-          
-
+        <section class="about-slider">
+            <div class="slider">
+                <div><img src="assets/img/cabins-slick1.jpg" alt="Buffalo River 1"></div>
+                <div><img src="assets/img/cabins-slick2.jpg" alt="Buffalo River 2"></div>
+                <div><img src="assets/img/cabins-slick3.jpg" alt="Buffalo River 3"></div>
+                <div><img src="assets/img/cabins-slick4.jpg" alt="Buffalo River 4"></div>
+                <div><img src="assets/img/cabins-slick5.jpg" alt="Buffalo River 5"></div>
+            </div>
+            <div class="slider-nav">
+                <div><img src="assets/img/cabins-slick1.jpg" alt="Buffalo River 1"></div>
+                <div><img src="assets/img/cabins-slick2.jpg" alt="Buffalo River 2"></div>
+                <div><img src="assets/img/cabins-slick3.jpg" alt="Buffalo River 3"></div>
+                <div><img src="assets/img/cabins-slick4.jpg" alt="Buffalo River 4"></div>
+                <div><img src="assets/img/cabins-slick5.jpg" alt="Buffalo River 5"></div>
+            </div>
+        </section>
+        <section class="cabins-content">
+            <div class="left-side2">
+                <h2>Amenities</h2>
+                <ul>
+                    <li>Hot tub and stone firepit on patio</li> 
+                    <li>Private creekside sitting area (Coming soon!) </li>
+                    <li>Wifi (no cell service in the area)</li>
+                    <li>42” TV with satellite/local channels, BluRay player, movies</li>
+                    <li>Fully-equipped kitchen – microwave, dishwasher, coffeemaker, toaster</li>
+                    <li>Dishes, pots and pans, cleaning supplies</li>
+                    <li>All bed and bath linens</li>
+                    <li>Front and back porches with seating</li>
+                    <li>Outdoor gas grill </li>
+                    <li>Mini-split HVAC plus electric “fireplace” heater</li>
+                    <li>Parking in front of cabin</li>
+                    <li>Firewood for outdoor fire pit</li>
+                    <li>Convenient to the Buffalo Outdoor Center store and the Ponca Elk Education Center</li>
+                    <li>Just a short drive to the Ponca Access and the Lost Valley Trailhead</li>
+                </ul>
+            </div>
+            <div class="right-side2">
+                <h2>Rates:</h2>
+                <p>$195 per night <br> $1195 per week</p>
+                <h2>Address: </h2>
+                <p>36°01'33.6"N <br> 93°21'54.6"W <br> AR-43, Compton, AR 72624</p>
+            </div>
+          </section>                     
         <footer>
             <div class="footer-container">
                 <div class="footer-logo-section">
@@ -98,7 +120,6 @@
                 </a>
                 </div>
                 </div>
-
             <div class="info-section">
                 <div class="vl">
                     <div class="vl-text"> Buffalo </div>
@@ -107,16 +128,17 @@
                     <div class="vl-text3"> AR-43, Compton, AR 72624</div>
                 </div>
             </div>
-
             <div class="contact">
                 <h6>Contact Us</h6>
-                <form class="form">
+                <form class="form" action="https://formspree.io/f/mzzrbkzg"
+                method="POST" >
                     <div class="form-row">
                         <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
                         <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
                     </div>
                     <div class="form-row">
                         <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="message" id="message" name="message" placeholder="Message" required>
                     </div>
                     <div class="form-row">
                         <button type="submit">Submit</button>
@@ -138,8 +160,6 @@
 		        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
 	        </svg>
         </div>
-
     </main>
-    
 </body>
 </html>
