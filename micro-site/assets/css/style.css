@@ -401,3 +401,9 @@ footer {
     border-radius: 0;
   }
 }
+
+img {
+  width: 100%; /* Adjust width as needed */
+  max-width: 500px; /* Set a maximum width */
+  height: 300px; /* Maintain aspect ratio */
+}
