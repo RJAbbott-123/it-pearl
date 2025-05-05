@@ -1,94 +1,74 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+Body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f9;
   color: #333;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.container {
-  max-width: 900px;
+.weather-card {
   background: #fff;
   padding: 30px;
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 60%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-form {
-  margin-bottom: 20px;
+.weather-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
+.weather-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type="text"] {
+.icon {
+  font-size: 30px;
+}
+.weather-table {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-.message {
-  color: red;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
-
-#location-info {
-  margin-bottom: 20px;
-  background: #e9ecef;
-  padding: 10px;
-  border-radius: 3px;
-}
-
-.info-item {
-  margin: 5px 0;
-}
-
-table {
-  width: 100%;
+  margin: 20px auto;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 
-th,
-td {
-  padding: 10px;
+.weather-table th, .weather-table td {
+  padding: 12px;
   border: 1px solid #ddd;
   text-align: center;
 }
 
-th {
-  background: #f2f2f2;
+.weather-table th {
+  background-color: #2A2522;
+  color: #F7F3EE;
 }
 
-canvas {
+.weather-table tr:nth-child(even) {
+  background-color: #F7F3EE;
+}
+
+.weather-page #weather h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary);
   margin-bottom: 20px;
 }
