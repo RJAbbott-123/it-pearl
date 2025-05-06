@@ -1,4 +1,8 @@
 function calculate() {
+    let form = $( "#myform" );
+    
+if (form.valid()) {
+
     const operand1 = parseFloat(document.getElementById("Operand1").value);
     const operand2 = parseFloat(document.getElementById("Operand2").value);
     const operator = document.querySelector('input[name="Operator"]:checked').value;
@@ -24,44 +28,12 @@ function calculate() {
     // Display the result
     document.getElementById("Result").innerText = result;
 }
+}
 
 function clearform() {
     document.getElementById("myform").reset();
     document.getElementById("Result").innerText = "";
+    document.getElementById("Operand1Error").innerHTML = "";
+    document.getElementById("Operand2Error").innerHTML = "";
+    document.getElementById("OperatorError").innerHTML = "";
 }
-
-$("#calculatorForm").validate({
-    rules: {
-        Operand1: {
-            required: true,
-            number: true
-        },
-        Operand2: {
-            required: true,
-            number: true
-        },
-        Operator: {
-            required: true
-        }
-    },
-    messages: {
-        Operand1: {
-            required: "Operand 1 is required",
-            number: "Operand 1 must be a number"
-        },
-        Operand2: {
-            required: "Operand 2 is required",
-            number: "Operand 2 must be a number"
-        },
-        Operator: {
-            required: "Operator is required"
-        }
-    },
-    errorPlacement: function(error, element) {
-        if (element.attr("name") === "Operator") {
-            error.appendTo("#OperatorError");
-        } else {
-            error.appendTo(`#${element.attr("name")}Error`);
-        }
-    }
-});
