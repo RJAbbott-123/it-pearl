@@ -101,5 +101,9 @@ function clearForm() {
   document.getElementById("ToMiles").checked = false;
 
   document.getElementById("myform").reset();
-  document.getElementById("Result").innerText = "";
+  document.getElementById("ToValue").innerHTML = "";
+
+  document.getElementById("FromValueError").innerHTML = "";
+  document.getElementById("FromUnitError").innerHTML = "";
+  document.getElementById("ToUnitError").innerHTML = "";
 }
