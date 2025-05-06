@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const header = document.querySelector("header");
     header.classList.toggle("scrolled", window.scrollY > 50);
 });
-
+/*
 async function fetchWeather() {
   const url = "https://api.open-meteo.com/v1/forecast?latitude=35.1173&longitude=-92.9377&daily=sunrise,sunset,uv_index_max&hourly=temperature_2m,rain,relative_humidity_2m,snowfall,cloud_cover,wind_speed_10m&current=temperature_2m,wind_speed_10m,relative_humidity_2m,apparent_temperature,precipitation,rain,cloud_cover&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch";
   
@@ -48,7 +48,7 @@ async function fetchWeather() {
       console.error("Error fetching weather data:", error);
   }
 }
-
+*/
 document.addEventListener("DOMContentLoaded", fetchWeather);
 
 async function fetchWeather() {
